@@ -1,95 +1,83 @@
 {
-  "name": "socratic",
-  "main": "expo-router/entry",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "EXPO_NO_TELEMETRY=1 expo start",
-    "build:web": "expo export --platform web",
-    "lint": "expo lint",
-    "android": "expo run:android",
-    "ios": "expo run:ios"
-  },
-  "dependencies": {
-    "@expo-google-fonts/urbanist": "^0.4.1",
-    "@expo/vector-icons": "~14.0.4",
-    "@ledgerhq/devices": "^8.4.7",
-    "@ledgerhq/hw-transport-webhid": "^6.28.0",
-    "@lottiefiles/dotlottie-react": "^0.6.5",
-    "@lottiefiles/react-lottie-player": "^3.6.0",
-    "@lucide/lab": "^0.1.2",
-    "@react-native-async-storage/async-storage": "1.23.1",
-    "@react-navigation/bottom-tabs": "^7.2.0",
-    "@react-navigation/drawer": "^7.1.1",
-    "@react-navigation/native": "^7.0.14",
-    "@solana-mobile/wallet-adapter-mobile": "^2.2.2",
-    "@solana/wallet-adapter-base": "^0.9.27",
-    "@solana/wallet-adapter-react": "^0.15.39",
-    "@solana/wallet-adapter-react-ui": "^0.9.39",
-    "@solana/wallet-adapter-wallets": "^0.19.37",
-    "@solana/web3.js": "^1.98.2",
-    "@supabase/supabase-js": "^2.50.3",
-    "axios": "^1.10.0",
-    "expo": "~52.0.47",
-    "expo-build-properties": "~0.13.3",
-    "expo-camera": "~16.0.18",
-    "expo-clipboard": "~7.0.1",
-    "expo-constants": "~17.0.8",
-    "expo-dev-client": "~5.0.20",
-    "expo-font": "~13.0.4",
-    "expo-google-fonts": "^0.0.0",
-    "expo-haptics": "~14.0.1",
-    "expo-linear-gradient": "~14.0.2",
-    "expo-linking": "~7.0.5",
-    "expo-router": "~4.0.0",
-    "expo-splash-screen": "~0.29.24",
-    "expo-status-bar": "~2.0.1",
-    "expo-symbols": "~0.2.2",
-    "expo-system-ui": "~4.0.9",
-    "lottie-react-native": "7.1.0",
-    "lottie-web": "^5.13.0",
-    "lucide-react-native": "^0.514.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-native": "0.76.9",
-    "react-native-document-picker": "^9.3.1",
-    "react-native-gesture-handler": "~2.20.0",
-    "react-native-image-colors": "^2.4.0",
-    "react-native-reanimated": "~3.16.1",
-    "react-native-safe-area-context": "4.12.0",
-    "react-native-screens": "~4.4.0",
-    "react-native-svg": "15.8.0",
-    "react-native-url-polyfill": "^2.0.0",
-    "react-native-web": "~0.19.13",
-    "react-native-webview": "13.12.5",
-    "react-qr-code": "^2.0.18",
-    "ws": "^8.17.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@types/react": "~18.3.12",
-    "@types/react-native": "^0.72.8",
-    "assert": "^2.0.0",
-    "browserify-zlib": "^0.2.0",
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.0",
-    "https-browserify": "^1.0.0",
-    "os-browserify": "^0.3.0",
-    "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
-    "typescript": "~5.8.3",
-    "util": "^0.12.5"
-  },
-  "expo": {
-    "doctor": {
-      "reactNativeDirectoryCheck": {
-        "listUnknownPackages": false,
-        "exclude": [
-          "react-native-document-picker"
-        ]
-      }
-    }
-  }
+	"name": "chalk",
+	"version": "5.4.1",
+	"description": "Terminal string styling done right",
+	"license": "MIT",
+	"repository": "chalk/chalk",
+	"funding": "https://github.com/chalk/chalk?sponsor=1",
+	"type": "module",
+	"main": "./source/index.js",
+	"exports": "./source/index.js",
+	"imports": {
+		"#ansi-styles": "./source/vendor/ansi-styles/index.js",
+		"#supports-color": {
+			"node": "./source/vendor/supports-color/index.js",
+			"default": "./source/vendor/supports-color/browser.js"
+		}
+	},
+	"types": "./source/index.d.ts",
+	"sideEffects": false,
+	"engines": {
+		"node": "^12.17.0 || ^14.13 || >=16.0.0"
+	},
+	"scripts": {
+		"test": "xo && c8 ava && tsd",
+		"bench": "matcha benchmark.js"
+	},
+	"files": [
+		"source",
+		"!source/index.test-d.ts"
+	],
+	"keywords": [
+		"color",
+		"colour",
+		"colors",
+		"terminal",
+		"console",
+		"cli",
+		"string",
+		"ansi",
+		"style",
+		"styles",
+		"tty",
+		"formatting",
+		"rgb",
+		"256",
+		"shell",
+		"xterm",
+		"log",
+		"logging",
+		"command-line",
+		"text"
+	],
+	"devDependencies": {
+		"@types/node": "^16.11.10",
+		"ava": "^3.15.0",
+		"c8": "^7.10.0",
+		"color-convert": "^2.0.1",
+		"execa": "^6.0.0",
+		"log-update": "^5.0.0",
+		"matcha": "^0.7.0",
+		"tsd": "^0.19.0",
+		"xo": "^0.57.0",
+		"yoctodelay": "^2.0.0"
+	},
+	"xo": {
+		"rules": {
+			"unicorn/prefer-string-slice": "off",
+			"@typescript-eslint/consistent-type-imports": "off",
+			"@typescript-eslint/consistent-type-exports": "off",
+			"@typescript-eslint/consistent-type-definitions": "off",
+			"unicorn/expiring-todo-comments": "off"
+		}
+	},
+	"c8": {
+		"reporter": [
+			"text",
+			"lcov"
+		],
+		"exclude": [
+			"source/vendor"
+		]
+	}
 }
